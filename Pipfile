@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pyqt5 = "==5.15.9"
+python-dotenv = "*"
+pynput = "*"
+qt-material = "*"
+
+[dev-packages]
+pre-commit = "*"
+
+[requires]
+python_version = "3.11"

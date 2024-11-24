@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <!-- 주요 UI 요소에 사용되는 기본 색상 (배경으로 사용, 밝은 파란색) -->
+    <color name="primaryColor">#FFFFFF</color>
+
+    <!-- 주요 색상의 밝은 변형 (호버 효과, 강조 영역) -->
+    <color name="primaryLightColor">#FFFFFF</color>
+
+    <!-- 보조 UI 요소에 사용되는 색상 (배경, 카드 등, 밝은 회색) -->
+    <color name="secondaryColor">#C4C6C9</color>
+
+    <!-- 보조 색상의 밝은 변형 (강조 효과나 추가 배경) -->
+    <color name="secondaryLightColor">#1A1A1A</color>
+
+    <!-- 배경임 -->
+    <color name="secondaryDarkColor">#1A1A1A</color>
+
+    <!-- 주요 텍스트에 사용되는 기본 색상 (검정색) -->
+    <color name="primaryTextColor">#FFFFFF</color>
+
+    <!-- 보조 텍스트 (설명, 부가 정보에 사용, 어두운 회색) -->
+    <color name="secondaryTextColor">#FFFFFF</color>
+</resources>
