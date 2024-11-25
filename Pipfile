@@ -8,6 +8,9 @@ pyqt5 = "==5.15.9"
 python-dotenv = "*"
 pynput = "*"
 qt-material = "*"
+websockets = "*"
+fastapi = "*"
+uvicorn = "*"
 
 [dev-packages]
 pre-commit = "*"

@@ -15,6 +15,23 @@ class CustomMessageBox(QMessageBox):
 
         # 스타일시트 제거
 
+    def information(self, title, message):
+        """Information 메시지 박스를 표시"""
+        self.setIcon(QMessageBox.Information)
+        self.setWindowTitle(title)
+        self.setText(message)
+
+        # 기존 버튼 숨기기
+        self.setStandardButtons(QMessageBox.NoButton)
+
+        # DefaultButton 추가
+        ok_button = DefaultButton("OK", self)
+        ok_button.setFixedSize(100, 40)
+        ok_button.clicked.connect(self.accept)
+
+        self.addButton(ok_button, QMessageBox.AcceptRole)
+        self.exec_()
+
     def critical(self, title, message):
         """Critical 메시지 박스를 표시"""
         self.setIcon(QMessageBox.Critical)
