@@ -2,6 +2,7 @@ import asyncio
 import json
 
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi.middleware.cors import CORSMiddleware
 
 
 class ServerHandler:
@@ -10,6 +11,14 @@ class ServerHandler:
         self.client_websocket = None  # 단일 클라이언트 관리
         self.connection_callbacks = []
         self.disconnection_callbacks = []
+
+        self.app.add_middleware(
+            CORSMiddleware,
+            allow_origins=["*"],  # 모든 도메인 허용
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
 
         @self.app.websocket("/ws")
         async def websocket_endpoint(websocket: WebSocket):
