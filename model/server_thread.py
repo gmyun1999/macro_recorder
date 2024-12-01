@@ -15,7 +15,7 @@ class ServerThread(QThread):
     def run(self):
         """FastAPI 서버 시작"""
         config = uvicorn.Config(
-            self.server_handler.app, host="127.0.0.1", port=8000, log_level="info"
+            self.server_handler.app, host="127.0.0.1", port=4000, log_level="info"
         )
         server = uvicorn.Server(config)
         server.run()

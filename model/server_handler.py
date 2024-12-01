@@ -14,7 +14,7 @@ class ServerHandler:
 
         self.app.add_middleware(
             CORSMiddleware,
-            allow_origins=["*"],  # 모든 도메인 허용
+            allow_origins=["http://localhost", "http://127.0.0.1"],
             allow_credentials=True,
             allow_methods=["*"],
             allow_headers=["*"],

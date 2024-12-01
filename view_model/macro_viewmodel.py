@@ -60,6 +60,7 @@ class MacroViewModel(QObject):
         self.status_changed.emit("client disconnected.")
 
     def start_recording(self):
+        self.recorder.flush_events()
         self.recorder.start_recording()
         self.is_recording = True
         self.status_changed.emit("recording...")

@@ -75,3 +75,8 @@ class MacroRecorder:
             "mouse_events": self.mouse_events,
             "keyboard_events": self.keyboard_events,
         }
+
+    def flush_events(self):
+        """현재 메모리에 저장된 이벤트 삭제."""
+        self.mouse_events = []
+        self.keyboard_events = []

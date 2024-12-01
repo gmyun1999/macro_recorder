@@ -60,6 +60,8 @@ class MacroPlayer(QThread):
         self.current_index += 1
 
     def execute_event(self, event):
+        # TODO: 마지막 클릭 무시, esc 키 누르면 중지
+
         """이벤트 실행"""
         if event["type"] == "mouse_click":
             button = Button[event["button"]]
@@ -81,6 +83,13 @@ class MacroPlayer(QThread):
             return keyboard.Key[key_str]
         if len(key_str) == 1:
             return key_str
+
+        # 한/영 키와 같은 특수 키 처리
+        if key_str.lower() == "han_eng":  # 한/영 전환 키
+            print("한/영 키 전환 감지")
+            return None  # IME 전환 키는 실행 불가
+
+        print(f"키를 인식하지 못했습니다: {key_str}")
         return None
 
     def register_callback(self, on_stop=None, on_complete=None):
