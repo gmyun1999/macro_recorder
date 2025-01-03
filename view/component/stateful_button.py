@@ -40,7 +40,6 @@ class StatefulDefaultButton(QPushButton):
     def setEnabled(self, enabled: bool):
         """Override setEnabled to update style when enabled state changes."""
         super().setEnabled(enabled)
-        print("setEnabled", enabled)
         self.update_style()
 
     def update_style(self):

@@ -4,13 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyqt5 = "==5.15.9"
+pyqt5 = "*"
 python-dotenv = "*"
 pynput = "*"
 qt-material = "*"
 websockets = "*"
 fastapi = "*"
 uvicorn = "*"
+jinja2 = "*"
 
 [dev-packages]
 pre-commit = "*"

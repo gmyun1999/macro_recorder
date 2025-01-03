@@ -119,7 +119,6 @@ class MacroGUI(QWidget):
 
     def toggle_recording_buttons(self, enabled):
         """녹화 버튼 상태 업데이트"""
-        print("녹화버튼 상태", enabled)
         self.record_button.setEnabled(enabled)
 
     def toggle_playback_buttons(self, enabled):

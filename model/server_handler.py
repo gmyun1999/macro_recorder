@@ -45,7 +45,7 @@ class ServerHandler:
             await websocket.accept()
             self.client_websocket = websocket
             self._notify_callbacks(self.connection_callbacks)
-            print("클라이언트 연결됨")
+            print("client connected")
 
             while True:
                 try:
@@ -57,15 +57,15 @@ class ServerHandler:
                         # Pong 메시지 응답
                         response = {"type": "pong", "data": None}
                         await websocket.send_text(json.dumps(response))
-                        print("Pong 메시지 전송")
+                        print("received ping, sended Pong")
 
                 except asyncio.TimeoutError:
-                    print("타임아웃 발생: 클라이언트가 응답하지 않음")
+                    print("timeout occurred client disconnected")
                     await websocket.close()
                     break
 
         except WebSocketDisconnect:
-            print("클라이언트 연결 끊김")
+            print("client disconnected")
             if not notified_disconnection:
                 self._notify_callbacks(self.disconnection_callbacks)
                 notified_disconnection = True
@@ -74,16 +74,16 @@ class ServerHandler:
             if not notified_disconnection:  # finally에서도 확인
                 self._notify_callbacks(self.disconnection_callbacks)
             self.client_websocket = None
-            print("클라이언트 WebSocket 정리 완료")
+            print("client socket closed")
 
     async def send_message(self, message: dict):
         """특정 클라이언트에게 메시지 전송"""
         if self.client_websocket is not None:
             try:
                 await self.client_websocket.send_text(json.dumps(message))
-                print(f"메시지 전송 완료: {message}")
+                print(f"record_sended")
 
             except Exception as e:
-                print(f"메시지 전송 중 오류 발생: {e}")
+                print(f"error while sending record: {e}")
         else:
-            print("연결된 클라이언트가 없습니다.")
+            print("there are no connected clients")

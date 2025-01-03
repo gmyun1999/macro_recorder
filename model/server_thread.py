@@ -1,7 +1,6 @@
 import asyncio
 
 import uvicorn
-from fastapi import WebSocketDisconnect
 from PyQt5.QtCore import QThread
 
 
@@ -15,7 +14,7 @@ class ServerThread(QThread):
     def run(self):
         """FastAPI 서버 시작"""
         config = uvicorn.Config(
-            self.server_handler.app, host="127.0.0.1", port=4000, log_level="info"
+            self.server_handler.app, host="127.0.0.1", port=6281, log_level="info"
         )
         server = uvicorn.Server(config)
         server.run()
