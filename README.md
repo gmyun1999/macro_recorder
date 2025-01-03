@@ -2,7 +2,7 @@
 # Execution Guide: Macro Recorder Project
 
 This document explains how to set up and run the **Macro Recorder** project. This project is a GUI-based macro recorder that captures mouse and keyboard events and transmits them to a WebSocket server in real-time.
-
+To use the Macro Recorder without setting up a Python environment, you can download the pre-built `.exe` file from the [Releases](https://github.com/gmyun1999/macro_recorder/releases) 
 ---
 
 ## 1. Prerequisites

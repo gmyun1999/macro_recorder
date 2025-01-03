@@ -67,3 +67,5 @@ ehthumbs.db
 
 *.log
 debug_helper.py
+
+*.exe 
