@@ -6,7 +6,8 @@ This project is a GUI-based macro recorder that captures mouse and keyboard even
 ---
 ### Download
 - To use the Macro Recorder without setting up a Python environment
-[click here main.exe download](https://github.com/gmyun1999/macro_recorder/releases/download/v1.0.0/main.exe)
+[click here](https://github.com/gmyun1999/macro_recorder/releases/download/untagged-d11e8691197294cff621/main.exe)
+to download exe file
 
 ## 1. Prerequisites
 
