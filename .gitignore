@@ -69,3 +69,4 @@ ehthumbs.db
 debug_helper.py
 
 *.exe 
+*.set_up.py
