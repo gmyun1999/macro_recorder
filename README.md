@@ -14,6 +14,13 @@ This project is a GUI-based macro recorder that captures mouse and keyboard even
 [click here](https://github.com/gmyun1999/macro_recorder/releases/download/untagged-d11e8691197294cff621/main.exe)
 to download exe file
 
+### Limitations:
+- **Works only on Windows operating systems**.
+  - Tested on Windows 10 and later versions.
+- Supports only a single client connection.
+- WebSocket connection may close if the client does not send `ping` messages regularly.
+
+
 ## 1. Prerequisites
 
 ### Required Software:
